@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Stack.h" />
     <ClInclude Include="Node.h" />
   </ItemGroup>
   <ItemGroup>
