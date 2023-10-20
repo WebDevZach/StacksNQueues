@@ -1,35 +1,19 @@
 #ifndef NODE_H
 #define NODE_H
 
+
 class Node
 {
 public:
 
 	Node(char myChar)
 	{
-		this->charValue = myChar;
-	}
-
-	void link(Node nextNode)
-	{
-		this->nextNode = &nextNode;
+		this->value = myChar;
 	}
 
 	Node* nextNode = nullptr;
-	char charValue; 
-
-private:
-	/*Node* nextNode = nullptr;
-	char charValue;*/
+	char value; 
 };
-
-
-
-
-
-
-
-
 
 
 #endif
