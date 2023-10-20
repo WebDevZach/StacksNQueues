@@ -2,66 +2,42 @@
 #define STACK_H
 
 
-class Stack
-{
+class Stack {
 public:
-	Stack() : top(nullptr) {}
+    Stack() : top(nullptr) {}
 
-	bool isEmpty();
-	bool push(char);
-	bool pop();
-	char peek();
+    bool isEmpty() {
+        return top == nullptr;
+    }
+
+    bool push(char myChar) {
+        Node* newNode = new Node(myChar);
+        newNode->nextNode = top;
+        top = newNode;
+        return true;
+    }
+
+    bool pop() {
+        if (isEmpty()) {
+            return false;
+        }
+
+        Node* temp = top;
+        top = top->nextNode;
+        delete temp;
+        return true;
+    }
+
+    char peek() {
+        if (isEmpty()) {
+            throw runtime_error("Stack is empty.");
+        }
+        return top->value;
+    }
 
 private:
-	Node* top;
+    Node* top;
 };
-
-bool Stack::push(char myChar)
-{
-	Node myNode(myChar);
-	myNode.nextNode = this->top;
-	top = myNode.nextNode;
-
-	if (isEmpty())
-		return false;
-
-	return true;
-}
-
-bool Stack::pop()
-{
-	if (isEmpty()) 
-		return false;
-	
-
-	Node* temp = top;
-	top = top->nextNode;
-
-	delete temp;
-
-	return true;
-}
-
-bool Stack::isEmpty()
-{
-	if (top == nullptr)
-		return true;
-	else
-		return false;
-}
-
-char Stack::peek()
-{
-	if (isEmpty)
-	{
-		return;
-	}
-
-	return top->value;
-}
-
-
-
 
 #endif
 

@@ -16,15 +16,16 @@ using namespace std;
 int main()
 {
 
-	Node nodeOne('A');
-	Node nodeTwo('B');
-	Node nodeThree('C');
+	Stack myStack;
 
-	
+	cout << myStack.isEmpty();
 
-
-	cout << nodeThree.nextNode;
-
+	myStack.push('B');
+	myStack.push('B');
+	myStack.push('B');
+	myStack.push('B');
+	myStack.push('c');
+	cout << endl << myStack.peek() << endl;
 
 
 
