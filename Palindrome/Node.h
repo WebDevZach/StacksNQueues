@@ -2,12 +2,10 @@
 #define NODE_H
 
 
-class Node
-{
+class Node {
 public:
 
-	Node(char myChar)
-	{
+	Node(char myChar) {
 		this->value = myChar;
 	}
 
