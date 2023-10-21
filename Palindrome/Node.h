@@ -9,8 +9,8 @@ public:
 		this->value = myChar;
 	}
 
-	Node* nextNode = nullptr;
-	char value; 
+	Node* nextNode = nullptr; // points to the next node
+	char value; // holds the node's value 
 };
 
 
